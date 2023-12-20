@@ -1,0 +1,5 @@
+{
+    "project_name": "Your Project Name",
+    "project_slug": "{{cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_')}}",
+    "parser_class": "{{cookiecutter.project_name|title()|replace(' ', '')|replace('-', '')|}}PageParser"
+}
