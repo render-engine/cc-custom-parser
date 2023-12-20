@@ -1,8 +1,11 @@
 # Render Engine `BasePageParser`
 
-The `BasePageParser` is used for making content for Render Engine. Parsers are used to parse the content of a page and convert it to HTML. The parser is specified in the page attributes as `Parser`.
+## Installation
+You can install this using pip
 
-This is meant to be used by Render Enging but can be used as a base dependency for building custom Render Engine Parsers.
+```sh
+pip install {{cookiecutter.project_slug}}
+```
 
 ## Using Frontmatter
 
