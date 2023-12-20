@@ -1,41 +1,24 @@
-# Render Engine `BasePageParser`
+# Cookiecutter Render Engine Custom Parsers
 
-## Installation
-You can install this using pip
+This [cookiecutter](https://github.com/cookiecutter/cookiecutter) template helps you generate a custom parser for the [Render Engine](https://github.com/render-engine/render-engine).
 
-```sh
-pip install {{cookiecutter.project_slug}}
-```
-{% if frontmatter %}
-## Using Frontmatter
+## Usage
 
-[Frontmatter](https://github.com/eyeseast/python-frontmatter) is used to pull in attributes from a generated page.
+1. Install cookiecutter
 
-Some pages will be looking for information that is provided in the frontmatter. All of the attributes defined can be used in the template (which itself can also be defined in the frontmatter or the class itself.
-
-> **NOTE**
-> These attributes **CANNOT** be used in the content itself, but you can use them in the template generation.
-
-{% endif %}
-
-## Parsing the Data
-
-The base parser doesn't is a pass-thru parser meaning the content input will be passed through.
-
-```md
-# TODO: EXAMPLE OF HOW YOUR DATA IS PARSED
+```bash
+pip install cookiecutter
 ```
 
-If you generate the page with the following template
+2. Run cookiecutter
 
-```html
-<div>
-# TODO: EXAMPLE OF A TEMPLATE
-</div>
+```bash
+cookiecutter gh:render-engine/cookiecutter-render-engine-custom-parser
 ```
 
-it would generate.
+3. Answer the questions
 
-```html
-# TODO: EXAMPLE OF A GENERATED REPORT
-```
+4. Replace areas marked with `TODO` in the generated code
+
+We recommend using [VSCode](https://code.visualstudio.com/) with the [TODO Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) extension to keep track of the `TODO` comments.
+
