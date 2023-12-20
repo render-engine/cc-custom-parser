@@ -5,21 +5,22 @@ from render_engine_parser.base_parsers import BasePageParser, parse_content
 
 @pytest.fixture()
 def base_content() -> str:
+    # REPLACE THIS WITH AN EXAMPLE OF YOUR EXPECTED CONTENT TYPE
     return """
 ---
 title: This is a Test
 ---
 
-# This is a Test"""
+# This is a Test
+"""
 
 
 @pytest.fixture()
 def base_content_path(tmp_path, base_content):
     """Returns the path to a test file"""
-    d = tmp_path / "test_page.md"
+    d = tmp_path / "test_page.md" # REPLACE WITH YOUR FILE_TYPE
     d.write_text(base_content)
     return d
-
 
 def test_parse_content(base_content):
     """
@@ -30,7 +31,7 @@ def test_parse_content(base_content):
     Base Content is an example of a markdown file with frontmatter.
     """
 
-    expected_result = ({"title": "This is a Test"}, "# This is a Test")
+    expected_result = ({"title": "This is a Test"}, "# This is a Test") # REPLACE YOUR CONTENT WITH THE EXPECTED CONTENT
     assert expected_result == parse_content(base_content)
 
 
@@ -40,7 +41,7 @@ def test_base_parser_parse_content(base_content):
     This assures that the API is consistently calling the parse_content
     """
 
-    expected_result = ({"title": "This is a Test"}, "# This is a Test")
+    expected_result = ({"title": "This is a Test"}, "# This is a Test")  # REPLACE YOUR CONTENT WITH THE EXPECTED CONTENT
     assert expected_result == BasePageParser.parse_content(base_content)
 
 
@@ -50,5 +51,5 @@ def test_base_parser_parse_content_path(base_content_path):
     This assures that the API is consistently calling the parse_content
     """
 
-    expected_result = ({"title": "This is a Test"}, "# This is a Test")
+    expected_result = ({"title": "This is a Test"}, "# This is a Test")  # REPLACE YOUR CONTENT WITH THE EXPECTED CONTENT
     assert expected_result == BasePageParser.parse_content_path(base_content_path)
